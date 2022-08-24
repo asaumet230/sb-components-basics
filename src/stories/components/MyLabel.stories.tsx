@@ -11,7 +11,8 @@ export default {
     argTypes: {
         size: { control: 'select' },
         color: { control: 'select' },
-        fontColor: { control: 'color' }
+        fontColor: { control: 'color' },
+        backgroundColor: { control: 'color' }
     }
 
 } as ComponentMeta<typeof MyLabel> // Esta interfaz es una descripción del objeto
@@ -48,4 +49,11 @@ export const CustomFontColor = Template.bind({});
 CustomFontColor.args = {
     size: 'h1',
     fontColor: '#5e0adb'
+}
+
+export const CustomBackgroundColor = Template.bind({});
+CustomBackgroundColor.args = {
+    size: 'h1',
+    fontColor: 'white',
+    backgroundColor: '#5e0adb'
 }

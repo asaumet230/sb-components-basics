@@ -24,6 +24,10 @@ export interface MyLabelProps {
     * This property give the control to the client to change the color of the font
     */
     fontColor?: string;
+    /**
+    * This property give the control to the client to change the color of the font
+    */
+    backgroundColor?: string;
 }
 
 type ComponentSize = 'normal' | 'h1' | 'h2' | 'h3';
@@ -36,13 +40,15 @@ export const MyLabel = ({
     color = 'primary',
     label = 'No Label',
     size = 'normal',
-    fontColor
+    fontColor,
+    backgroundColor = 'transparent'
 
 }: MyLabelProps) => {
 
     return (
         <span className={`label ${size} text-${color}`} style={{
-            color: fontColor
+            color: fontColor,
+            backgroundColor
         }}>
             {allCaps ? label.toUpperCase() : label}
         </span>
