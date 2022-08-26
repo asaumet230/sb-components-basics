@@ -16,7 +16,7 @@ export interface MyLabelProps {
     */
     allCaps?: boolean;
     /**
-    * This property changes the color of the text
+    * This property changes the color of the text that you type
     */
     color?: TextColor;
 
